@@ -1,0 +1,44 @@
+
+### Stat Meanings and Usage for ERRATA
+
+1. **Power**:
+   - **Meaning**: Represents raw physical strength, force, and endurance. This stat is vital for tasks that require brute force, breaking barriers, or withstanding physical challenges.
+   - **Gameplay Usage**:
+     - **Challenges**: Used for tasks like breaking down doors, enduring physical trials (e.g., storms, bridges), and lifting obstacles.
+     - **Success**: High Power ensures survival in situations where physical might is necessary, like fighting or carrying heavy objects.
+     - **Failure**: A low Power stat results in failure during physically demanding challenges, like falling from a height or being struck by powerful forces.
+
+2. **Imagination**:
+   - **Meaning**: Represents creativity, problem-solving, and the ability to visualize solutions to abstract problems. Imagination is critical for intellectual and non-linear challenges.
+   - **Gameplay Usage**:
+     - **Challenges**: Used for solving puzzles, overcoming mental barriers, or creating strategies in scenarios involving abstract elements (e.g., riddles, dreams, illusions).
+     - **Success**: A high Imagination stat can help the player navigate complex riddles or defy the normal laws of reality in abstract scenarios.
+     - **Failure**: A low Imagination stat may cause the player to be trapped in abstract challenges or unable to solve important puzzles, leading to failure.
+
+3. **Agility**:
+   - **Meaning**: Represents the ability to move quickly, nimbly, and with precision. Agility is crucial for tasks requiring speed, evasion, or quick reflexes.
+   - **Gameplay Usage**:
+     - **Challenges**: Used for navigating mazes, evading attacks, and tasks that require physical dexterity (e.g., avoiding detection, crossing fragile terrain).
+     - **Success**: A high Agility stat ensures successful evasion of threats and helps the scion move through physically demanding environments with speed.
+     - **Failure**: A low Agility stat leads to failure in challenges requiring quick reactions or precision, resulting in getting caught or failing to navigate a maze.
+
+4. **Acuity**:
+   - **Meaning**: Represents sharpness of the senses, focus, and mental clarity. Acuity is key for perceiving threats or details that others might miss, like hidden clues or impending danger.
+   - **Gameplay Usage**:
+     - **Challenges**: Used to detect hidden dangers, unlock hidden paths, or solve challenges that require keen awareness (e.g., sensing the presence of a hidden enemy).
+     - **Success**: A high Acuity stat ensures that the player can spot clues, avoid traps, and react to subtle shifts in the environment.
+     - **Failure**: A low Acuity stat results in being oblivious to threats or missing important information that could lead to failure in the challenge.
+
+5. **Mutability**:
+   - **Meaning**: Represents the ability to adapt, change, or shift one's form, approach, or perspective in response to challenges. This stat is key for overcoming unpredictable, evolving environments or abstract forces.
+   - **Gameplay Usage**:
+     - **Challenges**: Used in dynamic challenges that require flexibility, such as altering one's approach in a fast-changing environment (e.g., shifting gravity, changing landscapes).
+     - **Success**: A high Mutability stat enables the scion to adjust to the fluid nature of reality, making them resilient to environmental changes or paradoxical challenges.
+     - **Failure**: A low Mutability stat means the player is stuck in an inflexible mindset or form, unable to adapt to unexpected challenges, leading to failure.
+
+6. **Otherness**:
+   - **Meaning**: Represents a scion's connection to the unknown, the mystical, or the supernatural. Otherness is crucial for facing challenges that defy the known world or tap into deeper, mystical forces.
+   - **Gameplay Usage**:
+     - **Challenges**: Used to interact with supernatural phenomena, resist curses or magical effects, or understand things outside of normal human perception (e.g., confronting a haunted force or dealing with reality-bending phenomena).
+     - **Success**: A high Otherness stat allows the scion to tap into the supernatural, resisting effects or unlocking the ability to manipulate the unknown forces.
+     - **Failure**: A low Otherness stat makes the player vulnerable to otherworldly effects, leading to being overwhelmed by mystical forces or falling into otherworldly traps.
