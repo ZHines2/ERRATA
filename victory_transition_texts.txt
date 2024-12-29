@@ -1,0 +1,41 @@
+Challenge: Victory: Overcoming the Void
+Victory Text: The whispers fade into silence as your mind clears. You have conquered the Echoing Void, your clarity intact. With steady steps, you move forward, your resolve stronger.
+Next Scene Transition: As the mist dissipates, a new path reveals itself, leading you deeper into the unknown.
+
+Challenge: Victory: Prism Shattered
+Victory Text: With a surge of power, you bend the prism to your will, unraveling its fractured patterns. The colors of reality swirl and reset, revealing the next challenge.
+Next Scene Transition: A bright light pierces the darkness, signaling your journey ahead.
+
+Challenge: Victory: Maze Unraveled
+Victory Text: Your quick feet find the hidden passageway, the maze’s walls surrendering to your speed. With a breath of relief, you emerge from its depths.
+Next Scene Transition: The exit looms ahead, but you can already hear the storm brewing. Time to press on.
+
+Challenge: Victory: Silent Escape
+Victory Text: You move with the grace of a shadow, escaping the Silent Watcher's gaze. You’ve passed unnoticed, and the path ahead is open.
+Next Scene Transition: The winds begin to howl as you step forward, the road ahead uncertain but clear.
+
+Challenge: Victory: Memory Restored
+Victory Text: The rift recedes, your memories returning. You regain your sense of self, your mind whole once again. The passage forward is now clear.
+Next Scene Transition: The stars above flicker and fade, guiding you to your next destination.
+
+Challenge: Victory: Bridge Crossed
+Victory Text: The bridge creaks, but your strength holds. You pass over the chasm, and the rusted path behind you fades into the distance.
+Next Scene Transition: A distant rumble echoes, as if the very earth beneath you is awakening. Keep moving.
+
+Challenge: Victory: Storm Weathered
+Victory Text: Your body trembles, but your spirit is unyielding. You’ve withstood the storm, and now, calm reigns. The horizon opens before you.
+Next Scene Transition: A ray of light breaks through the clouds, revealing your next trial.
+
+Challenge: Victory: Riddle Solved
+Victory Text: The oracle’s riddle unravels in your mind, its meaning clear. With newfound knowledge, you continue on your path, wiser than before.
+Next Scene Transition: The oracle’s gaze follows you as you step into the next chapter of your journey.
+
+Challenge: Victory: Furnace Overcome
+Victory Text: The furnace’s heat subsides, and you stand victorious. The fires are nothing against your will. The next challenge beckons.
+Next Scene Transition: The ground shakes as the path ahead opens up, leading you into uncharted territory.
+
+Challenge: Victory: Chasm Crossed
+Victory Text: With a surge of strength and will, you defy gravity and cross the chasm. The air shifts, and your victory echoes into the void.
+Next Scene Transition: You land on solid ground, but the journey is far from over. Ahead, you see only darkness and the unknown.
+
+Press any key to continue...

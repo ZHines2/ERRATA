@@ -1,0 +1,50 @@
+Challenge: The Echoing Void
+Scenario: The air is thick with whispers that drive the mind into madness. Only those with sharp minds can resist the pull of the void.
+Required Stat: Acuity (Threshold: 6)
+Description: The player must select a scion with high acuity to overcome the mental strain. Failure results in confusion and disorientation, causing the scion to be 'lost' and removed.
+
+Challenge: The Prism of Dreams
+Scenario: A swirling, multi-colored prism blocks your path, shifting and fracturing reality. Only those who can adapt and bend reality may pass.
+Required Stat: Mutability (Threshold: 7)
+Description: The player needs a scion with strong mutability to shift the prism's patterns. Failure causes the player to lose control of the prism, leaving the scion frozen in a dream-like state.
+
+Challenge: The Inescapable Maze
+Scenario: A labyrinth of shifting walls confounds your every step. Only the most agile can find the center.
+Required Stat: Agility (Threshold: 5)
+Description: The player must choose a scion with high agility to navigate the maze's constantly changing structure. Failure results in being trapped in the maze, losing a scion forever.
+
+Challenge: The Silent Watcher
+Scenario: A shadow lurks, watching your every move. You must make no sound and avoid detection. Only those with perfect control of their bodies can pass.
+Required Stat: Agility (Threshold: 6)
+Description: The player needs a scion with excellent agility to avoid detection by the Silent Watcher. If they fail, they make a noise, and the watcher strikes, removing the scion from the group.
+
+Challenge: The Rift of Forgotten Memories
+Scenario: A rift in space and time has opened, erasing memories from your mind. Only those with the ability to recall and hold their thoughts can navigate it.
+Required Stat: Imagination (Threshold: 5)
+Description: The player must select a scion with strong imagination to resist the rift’s effect on their memories. Failure results in the loss of critical knowledge, making the scion disappear into the rift.
+
+Challenge: The Iron Bridge
+Scenario: The narrow, rusted bridge ahead seems to creak with every step. Only those with strength can endure its shaking.
+Required Stat: Power (Threshold: 6)
+Description: The player needs a strong scion to traverse the unstable bridge. If they fail, the bridge collapses, and the scion falls into the abyss, never to be seen again.
+
+Challenge: The Heart of the Storm
+Scenario: A violent storm rages, thunder and lightning cracking the sky. Only those with the fortitude to endure the storm’s fury can pass unharmed.
+Required Stat: Power (Threshold: 7)
+Description: The player must choose a scion with enough power to withstand the storm's raw energy. Failure results in the storm consuming the scion, stripping them of their strength.
+
+Challenge: The Oracle’s Riddle
+Scenario: An ancient oracle presents a riddle of the mind. Only those with great intellect and imagination can solve it.
+Required Stat: Imagination (Threshold: 6)
+Description: The player must select a scion with strong imagination and intellect to solve the riddle. Failure means the oracle’s curse takes hold, and the scion is lost in the riddle’s endless loop.
+
+Challenge: The Furnace of Souls
+Scenario: A blazing furnace swirls with ancient fire. Only those with the willpower to resist the flames can pass unharmed.
+Required Stat: Otherness (Threshold: 8)
+Description: The player must select a scion with a unique ability to withstand or adapt to the furnace’s intense heat. Failure causes the scion to burn away, becoming part of the furnace.
+
+Challenge: The Abyssal Chasm
+Scenario: A vast chasm opens before you. The winds howl, and the ground shakes beneath your feet. Only those who can defy gravity can survive.
+Required Stat: Mutability (Threshold: 6)
+Description: The player must choose a scion with mutability, capable of defying the gravitational pull of the chasm. Failure results in the scion being lost to the depths.
+
