@@ -25,6 +25,9 @@ var channel_scripts = [
 	preload("res://ChannelScionSelection.gd")
 ]
 
+# Load SCIONS.gd script
+var Scions = load("res://SCIONS.gd").new()
+
 func _ready():
 	print("Starting Multi-Channel Screen Saver...")
 	display_screen()
@@ -33,13 +36,18 @@ func _process(delta: float):
 	time_passed += delta
 	if time_passed >= update_interval:
 		time_passed = 0.0
-		if current_channel == 1:  # Beach scene movement
-			beach_offset = (beach_offset + 1) % (SCREEN_WIDTH - 2)
-		elif current_channel == 2:  # Scrolling text movement
-			scroll_offset -= 1
-			if scroll_offset + STORY_TEXT.size() < 0:  # Reset scrolling
-				scroll_offset = SCREEN_HEIGHT
+		update_channel_states()
 		display_screen()
+
+func update_channel_states():
+	if current_channel == 1:  # Beach scene movement
+		beach_offset = (beach_offset + 1) % (SCREEN_WIDTH - 2)
+	elif current_channel == 2:  # Scrolling text movement
+		scroll_offset -= 1
+		# Reset scrolling
+		var channel = channel_scripts[2].new()
+		if scroll_offset + channel.STORY_TEXT.size() < 0:
+			scroll_offset = SCREEN_HEIGHT
 
 func _input(event: InputEvent):
 	# Detect mouse left-click for channel switching
@@ -79,7 +87,7 @@ func display_screen():
 		2:
 			screen_output += channel.render_scrolling_text(SCREEN_WIDTH, SCREEN_HEIGHT, scroll_offset)
 		3:
-			screen_output += channel.render_scion_selection(SCREEN_WIDTH)
+			screen_output += channel.render_scion_selection(SCREEN_WIDTH, SCREEN_HEIGHT, selected_scion_index, selected_scions)
 
 	screen_output += "╚" + "═".repeat(SCREEN_WIDTH - 2) + "╝\n"
 	clear_console()
