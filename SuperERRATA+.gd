@@ -17,12 +17,13 @@ var scroll_offset: int = SCREEN_HEIGHT
 var selected_scion_index: int = 0
 var selected_scions: Array = []  # Holds up to 10 selected scions
 
-# Load channel scripts
+# Load and instantiate channel scripts
 var channel_scripts = [
-	preload("res://ChannelStatic.gd"),
-	preload("res://ChannelBeach.gd"),
-	preload("res://ChannelScrollingText.gd"),
-	preload("res://ChannelScionSelection.gd")
+	preload("res://ChannelStatic.gd").new(),
+	preload("res://ChannelBeach.gd").new(),
+	preload("res://ChannelScrollingText.gd").new(),
+	preload("res://ChannelScionSelection.gd").new(),
+	preload("res://ChannelExodus.gd").new()  # Adding the EXODUS channel script
 ]
 
 # Load SCIONS.gd script
@@ -30,6 +31,9 @@ var Scions = load("res://SCIONS.gd").new()
 
 func _ready():
 	print("Starting Multi-Channel Screen Saver...")
+	for channel in channel_scripts:
+		if channel.has_method("_ready"):
+			channel._ready()
 	display_screen()
 
 func _process(delta: float):
@@ -45,7 +49,7 @@ func update_channel_states():
 	elif current_channel == 2:  # Scrolling text movement
 		scroll_offset -= 1
 		# Reset scrolling
-		var channel = channel_scripts[2].new()
+		var channel = channel_scripts[2]
 		if scroll_offset + channel.STORY_TEXT.size() < 0:
 			scroll_offset = SCREEN_HEIGHT
 
@@ -78,7 +82,7 @@ func display_screen():
 	var padding = (SCREEN_WIDTH - 2 - title.length()) / 2
 	var screen_output = "╔" + "═".repeat(padding) + title + "═".repeat(SCREEN_WIDTH - 2 - padding - title.length()) + "╗\n"
 
-	var channel = channel_scripts[current_channel].new()
+	var channel = channel_scripts[current_channel]
 	match current_channel:
 		0:
 			screen_output += channel.render_static(SCREEN_WIDTH, SCREEN_HEIGHT)
@@ -88,6 +92,8 @@ func display_screen():
 			screen_output += channel.render_scrolling_text(SCREEN_WIDTH, SCREEN_HEIGHT, scroll_offset)
 		3:
 			screen_output += channel.render_scion_selection(SCREEN_WIDTH, SCREEN_HEIGHT, selected_scion_index, selected_scions)
+		4:
+			screen_output += channel.render_exodus_level(SCREEN_WIDTH, SCREEN_HEIGHT)
 
 	screen_output += "╚" + "═".repeat(SCREEN_WIDTH - 2) + "╝\n"
 	clear_console()
