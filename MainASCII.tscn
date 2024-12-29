@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://b8iimj5rcu5hg"]
+
+[ext_resource type="Script" path="res://MainASCII.gd" id="1_cxauq"]
+
+[node name="ERRATA" type="Node"]
+script = ExtResource("1_cxauq")
