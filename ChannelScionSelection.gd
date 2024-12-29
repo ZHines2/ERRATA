@@ -3,7 +3,7 @@ extends Node
 # Load SCIONS.gd script
 var Scions = load("res://SCIONS.gd").new()
 
-func render_scion_selection(screen_width: int) -> String:
+func render_scion_selection(screen_width: int, screen_height: int, selected_scion_index: int, selected_scions: Array) -> String:
 	var output: String = ""
 
 	# Display turntable of scions
@@ -17,14 +17,14 @@ func render_scion_selection(screen_width: int) -> String:
 			scion_line += "[" + Scions.scions[index]["symbol"] + "] "
 		else:
 			scion_line += Scions.scions[index]["symbol"] + " "
-	
+
 	output += pad_center(scion_line, screen_width - 2) + "\n"
 	output += "─".repeat(screen_width - 2) + "\n"  # Changed from '-' to '─' for better alignment
 
 	# Display selected scion details
 	var selected_scion = Scions.scions[selected_scion_index]
 	output += "║" + pad_center("Name: " + selected_scion["name"], screen_width - 2) + "║\n"
-	
+
 	# Fetch and display scion stats
 	var stats = selected_scion["stats"]
 	output += "║" + pad_center("Power: " + str(stats["power"]), screen_width - 2) + "║\n"
@@ -33,10 +33,10 @@ func render_scion_selection(screen_width: int) -> String:
 	output += "║" + pad_center("Acuity: " + str(stats["acuity"]), screen_width - 2) + "║\n"
 	output += "║" + pad_center("Mutability: " + str(stats["mutability"]), screen_width - 2) + "║\n"
 	output += "║" + pad_center("Otherness: " + str(stats["otherness"]), screen_width - 2) + "║\n"
-	
+
 	# Spacer
-	output += "║" + " ".repeat(screen_width - 2) + "║\n"  
-	output += "║" + " ".repeat(screen_width - 2) + "║\n"  
+	output += "║" + " ".repeat(screen_width - 2) + "║\n"
+	output += "║" + " ".repeat(screen_width - 2) + "║\n"
 
 	# Display selected scions at the bottom
 	output += "║" + pad_center("Selected Scions:", screen_width - 2) + "║\n"
@@ -46,7 +46,7 @@ func render_scion_selection(screen_width: int) -> String:
 	output += "║" + pad_center(selected_line.strip_edges(), screen_width - 2) + "║\n"  # Ensured trim and padding
 
 	# Pad remaining space to fill the screen
-	while output.split("\n").size() < SCREEN_HEIGHT:
+	while output.split("\n").size() < screen_height:
 		output += "║" + " ".repeat(screen_width - 2) + "║\n"
 
 	# Return the built output
