@@ -207,29 +207,30 @@ func render_scion_selection() -> String:
 		else:
 			scion_line += SCIONS[index]["glyph"] + " "
 
-	output += scion_line.center(SCREEN_WIDTH - 2) + "\n"
-	output += "-".repeat(SCREEN_WIDTH - 2) + "\n"
+	output += pad_center(scion_line, SCREEN_WIDTH - 2) + "\n"
+	output += "─".repeat(SCREEN_WIDTH - 2) + "\n"  # Changed from '-' to '─' for better alignment
 
-# Display selected scion details
+	# Display selected scion details
 	var selected_scion = SCIONS[selected_scion_index]
-	output += "║" + pad_text("Name: " + selected_scion["name"], SCREEN_WIDTH - 2) + "║\n"
-	output += ("║" + " ".repeat(SCREEN_WIDTH - 2) + "║\n") * 2  # Spacer
+	output += "║" + pad_center("Name: " + selected_scion["name"], SCREEN_WIDTH - 2) + "║\n"
+	output += "║" + " ".repeat(SCREEN_WIDTH - 2) + "║\n"  # Spacer
+	output += "║" + " ".repeat(SCREEN_WIDTH - 2) + "║\n"  # Spacer
 
-# Display selected scions at the bottom
-	output += "║" + pad_text("Selected Scions:", SCREEN_WIDTH - 2) + "║\n"
+	# Display selected scions at the bottom
+	output += "║" + pad_center("Selected Scions:", SCREEN_WIDTH - 2) + "║\n"
 	var selected_line = ""
 	for scion in selected_scions:
 		selected_line += scion["glyph"] + " "
-	output += "║" + pad_text(selected_line.strip_edges(), SCREEN_WIDTH - 2) + "║\n"
+	output += "║" + pad_center(selected_line.strip_edges(), SCREEN_WIDTH - 2) + "║\n"  # Ensured trim and padding
 
-# Pad remaining space to fill the screen
+	# Pad remaining space to fill the screen
 	while output.split("\n").size() < SCREEN_HEIGHT:
 		output += "║" + " ".repeat(SCREEN_WIDTH - 2) + "║\n"
 
-# Return the built output
+	# Return the built output
 	return output
 
-
+# Custom function to center-align text within a given width
 func pad_center(text: String, width: int) -> String:
 	var total_padding = max(width - text.length(), 0)
 	var left_padding = total_padding / 2
