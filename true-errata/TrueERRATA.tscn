@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://u4q8wrsoidpe"]
+
+[ext_resource type="Script" path="res://TrueERRATA.gd" id="1_1aa1u"]
+[ext_resource type="Script" path="res://BackgroundManager.gd" id="2_egl82"]
+[ext_resource type="Script" path="res://ScreenManager.gd" id="3_yort1"]
+
+[node name="TrueERRATA" type="Node"]
+script = ExtResource("1_1aa1u")
+
+[node name="BackgroundManager" type="Node" parent="."]
+script = ExtResource("2_egl82")
+
+[node name="ScreenManager" type="Node" parent="."]
+script = ExtResource("3_yort1")
