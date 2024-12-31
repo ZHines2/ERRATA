@@ -1,4 +1,3 @@
-# entity_manager.gd
 extends Node
 
 # Define the ScionEntity class
@@ -29,7 +28,7 @@ func create_scion(scion_data: Dictionary) -> ScionEntity:
 
 # Example usage in _ready
 func _ready():
-	var scions_data = load("res://SCIONS.gd").new().scions
+	var scions_data = load("res://SCIONS.gd").new().get("scions")
 	var scion_instances = []
 	for scion_data in scions_data:
 		var scion_instance = create_scion(scion_data)

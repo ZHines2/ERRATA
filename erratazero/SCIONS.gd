@@ -53,8 +53,11 @@ func display_scion_stats():
 			stats["mutability"],
 			stats["otherness"]
 		])
-
+func get_scions():
+	return scions
 # Test the array and display functions
 func _ready():
 	display_scion_symbols()
 	display_scion_stats()
+	
+	

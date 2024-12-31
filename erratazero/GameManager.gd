@@ -1,7 +1,8 @@
-# game_manager.gd
 extends Node
 
 func _ready():
-	var scion_selection = get_node("../ScionSelection")
-	scion_selection.display_scion_symbols()
-	get_tree().change_scene("res://scion_selection.tscn")
+	var child_node = get_node_or_null("ChildNode")  # Adjust the path as needed
+	if child_node:
+		remove_child(child_node)
+	else:
+		print("Error: ChildNode not found.")

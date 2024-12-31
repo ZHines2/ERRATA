@@ -1,15 +1,14 @@
-# controls.gd
 extends Node
 
-# This script will handle player input, which can be integrated into dungeon.gd
+signal move(direction: Vector2)
+
+# This script will handle player input, which can be integrated into other scripts
 func _input(event):
-	if event is InputEventKey:
-		match event.scancode:
-			KEY_W:
-				emit_signal("move", Vector2(0, -1))
-			KEY_S:
-				emit_signal("move", Vector2(0, 1))
-			KEY_A:
-				emit_signal("move", Vector2(-1, 0))
-			KEY_D:
-				emit_signal("move", Vector2(1, 0))
+	if event.is_action_pressed("ui_up"):
+		emit_signal("move", Vector2(0, -1))
+	elif event.is_action_pressed("ui_down"):
+		emit_signal("move", Vector2(0, 1))
+	elif event.is_action_pressed("ui_left"):
+		emit_signal("move", Vector2(-1, 0))
+	elif event.is_action_pressed("ui_right"):
+		emit_signal("move", Vector2(1, 0))
