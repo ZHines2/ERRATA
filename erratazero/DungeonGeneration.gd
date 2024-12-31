@@ -1,50 +1,33 @@
-# DungeonGeneration.gd
 extends Node2D
 
-const DUNGEON_SIZE = 20
-var dungeon = []
-var player_pos = Vector2(1, 1)
+var player : Node2D
 
 func _ready():
-	generate_dungeon()
-	draw_dungeon()
+	player = Node2D.new()
+	add_child(player)
 
-func generate_dungeon():
-	dungeon = []
-	for y in range(DUNGEON_SIZE):
-		var row = []
-		for x in range(DUNGEON_SIZE):
-			if randf() < 0.2:
-				row.append("#")  # Wall
-			else:
-				row.append(".")  # Floor
-		dungeon.append(row)
-	dungeon[player_pos.y][player_pos.x] = "@"  # Player start position
+	# Check if a scion was selected
+	if Global.selected_scion:
+		initialize_player(Global.selected_scion)
+	else:
+		print("Error: No scion selected.")
 
-func draw_dungeon():
-	var dungeon_str = ""
-	for y in range(DUNGEON_SIZE):
-		for x in range(DUNGEON_SIZE):
-			dungeon_str += dungeon[y][x]
-		dungeon_str += "\n"
-	print(dungeon_str)
+	# Connect the move signal from controls.gd
+	var controls = get_node("/root/ERRATAzero/Controls")
+	if controls:
+		controls.connect("move", Callable(self, "_on_move"))
+	else:
+		print("Error: Controls node not found.")
 
-func _input(event):
-	if event is InputEventKey:
-		match event.scancode:
-			KEY_W:
-				move_player(Vector2(0, -1))
-			KEY_S:
-				move_player(Vector2(0, 1))
-			KEY_A:
-				move_player(Vector2(-1, 0))
-			KEY_D:
-				move_player(Vector2(1, 0))
+func initialize_player(scion):
+	# Initialize the player with the selected scion's data
+	player.name = scion["name"]
+	var label = Label.new()
+	label.text = scion["symbol"]
+	player.add_child(label)
+	player.position = Vector2(100, 100)  # Place the player at a default position
+	print("Player initialized with scion: %s" % player.name)
 
-func move_player(direction):
-	var new_pos = player_pos + direction
-	if new_pos.x >= 0 and new_pos.x < DUNGEON_SIZE and new_pos.y >= 0 and new_pos.y < DUNGEON_SIZE:
-		if dungeon[new_pos.y][new_pos.x] != "#":
-			player_pos = new_pos
-			dungeon[player_pos.y][player_pos.x] = "@"
-			draw_dungeon()
+func _on_move(direction: Vector2):
+	if player:
+		player.position += direction * 10  # Adjust the multiplier as needed
