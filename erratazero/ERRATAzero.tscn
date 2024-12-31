@@ -1,0 +1,28 @@
+[gd_scene load_steps=7 format=3 uid="uid://cg5e7f00uvori"]
+
+[ext_resource type="Script" path="res://ScionSelection.gd" id="1_b8uco"]
+[ext_resource type="Script" path="res://DungeonGeneration.gd" id="2_1gevq"]
+[ext_resource type="Script" path="res://controls.gd" id="3_33p12"]
+[ext_resource type="Script" path="res://GameManager.gd" id="4_76tp5"]
+[ext_resource type="Script" path="res://combat.gd" id="5_5ot2k"]
+[ext_resource type="Script" path="res://EntityManager.gd" id="6_mr4te"]
+
+[node name="ERRATAzero" type="Node2D"]
+
+[node name="ScionSelection" type="Node2D" parent="."]
+script = ExtResource("1_b8uco")
+
+[node name="DungeonGeneration" type="Node2D" parent="."]
+script = ExtResource("2_1gevq")
+
+[node name="Controls" type="Node" parent="."]
+script = ExtResource("3_33p12")
+
+[node name="GameManager" type="Node" parent="."]
+script = ExtResource("4_76tp5")
+
+[node name="Combat" type="Node" parent="."]
+script = ExtResource("5_5ot2k")
+
+[node name="EntityManager" type="Node" parent="."]
+script = ExtResource("6_mr4te")
